@@ -1,3 +1,8 @@
+package Classes;
+
+
+import Classes.CircularDoubleList;
+
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -42,10 +47,10 @@ public class ParkingSpots  <T extends Comparable<T> > {
         } 
     }
     
-    public void add(Vehicle slot) {
+    /*public void add(Vehicle slot) {
         
         CircularDoubleList<Vehicle> newCar = new CircularDoubleList<Vehicle>();
-        newCar.List = slot;
+        newCar.c = slot;
         
         if (first == null){
            
@@ -54,7 +59,28 @@ public class ParkingSpots  <T extends Comparable<T> > {
             newCar.Previous = last;
             last = newCar;
             
-        }
+            
+        /*public void add(String name , int age){
+        
+       Students student = new Students(name,age);
+               
+       Node node = new Node(student);
+       
+       Node recent = getHead();
+       
+       if (this.head == null){
+           this.head = node; 
+       }else {
+           Node last = getHead();
+           
+           while(last.getNext() != null){
+                last = last.getNext();
+            }
+
+            last.setNext(node);
+       }
+            
+        }*/
         
         
         
@@ -62,6 +88,6 @@ public class ParkingSpots  <T extends Comparable<T> > {
         
         
 
-    }
+    
 
 }

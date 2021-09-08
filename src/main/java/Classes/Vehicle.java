@@ -1,3 +1,5 @@
+package Classes;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -12,7 +14,6 @@ public class Vehicle implements Comparable<Vehicle> {
     
     private String plaque;
     private String brand;
-    String color;
     private Person owner;
     
 
@@ -30,7 +31,7 @@ public class Vehicle implements Comparable<Vehicle> {
     public void setPlaque(String plaque) {
         this.plaque = plaque;
     }
-
+   
     public String getBrand() {
         return brand;
     }
@@ -50,6 +51,10 @@ public class Vehicle implements Comparable<Vehicle> {
     @Override
     public int compareTo(Vehicle o) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    @Override
+    public String toString(){
+        return "PLAQUE:"+plaque+"BRAND: "+brand+"OWNER: "+owner;
     }
 
     

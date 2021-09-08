@@ -1,3 +1,5 @@
+package Classes;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -10,19 +12,29 @@
  */
 public class Node<T extends Comparable>{
     
-    private Vehicle car;
+    private T car;
     private Node<T> next;
+    private Node<T> previuos;
 
-    public Node(Vehicle car, Node<T> next) {
+    public Node<T> getPreviuos() {
+        return previuos;
+    }
+
+    public void setPreviuos(Node<T> previuos) {
+        this.previuos = previuos;
+    }
+    
+
+    public Node(T car, Node<T> next) {
         this.car = car;
         this.next = next;
     }
 
-    public Vehicle getCar() {
+    public T getCar() {
         return car;
     }
 
-    public void setCar(Vehicle car) {
+    public void setCar(T car) {
         this.car = car;
     }
 
@@ -32,6 +44,10 @@ public class Node<T extends Comparable>{
 
     public void setNext(Node<T> next) {
         this.next = next;
+    }
+    public String showInformation(){
+        
+        return car.toString();
     }
     
     
