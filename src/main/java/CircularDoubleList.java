@@ -17,6 +17,9 @@ public class CircularDoubleList <T extends Comparable<T> > implements IListable<
     Node<T> current;
     private Vehicle c; 
 
+    public int size = 0;
+    
+    
 
 
     public CircularDoubleList(){
@@ -73,11 +76,43 @@ public class CircularDoubleList <T extends Comparable<T> > implements IListable<
     public void setC(Vehicle c) {
         this.c = c;
     }
-
+  
 
     void add(Vehicle slot) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
+        CircularDoubleList<Vehicle> newCar = new CircularDoubleList<Vehicle>();
+       
+        Node<T> node = new Node(slot);
+        
+        Node current = getFirst();
+        
+        if (this.first == null){
+            this.first  = ;
+        }
+        
+        /*public void add(String name , int age){
+        
+       Students student = new Students(name,age);
+               
+       Node node = new Node(student);
+       
+       Node recent = getHead();
+       
+       if (this.head == null){
+           this.head = node; 
+       }else {
+           Node last = getHead();
+           
+           while(last.getNext() != null){
+                last = last.getNext();
+            }
+
+            last.setNext(node);
+       }*/
     }
+
+    
+
     
     
     
