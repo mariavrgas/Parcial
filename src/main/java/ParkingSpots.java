@@ -14,20 +14,7 @@ public class ParkingSpots  <T extends Comparable<T> > {
     
     private Node Current ;
 
-    
-    public ParkingSpots(){
-        
-        List=new CircularDoubleList<Vehicle>();
-
-        for(int i=0;i<10;i++){
-
-            Vehicle slot=null;
-            
-            List.add(slot);
-        } 
-    } 
-
-    public CircularDoubleList<Vehicle> getList() {
+       public CircularDoubleList<Vehicle> getList() {
         return List;
     }
 
@@ -43,6 +30,38 @@ public class ParkingSpots  <T extends Comparable<T> > {
         this.Current = Current;
     }
     
+    public ParkingSpots(){
+        
+        List=new CircularDoubleList<Vehicle>();
+
+        for(int i=0;i<10;i++){
+
+            Vehicle slot=null;
+            
+            List.add(slot);
+        } 
+    }
     
-    
+    public void add(Vehicle slot) {
+        
+        CircularDoubleList<Vehicle> newCar = new CircularDoubleList<Vehicle>();
+        newCar.List = slot;
+        
+        if (first == null){
+           
+            first = newCar;
+            first.next = first;
+            newCar.Previous = last;
+            last = newCar;
+            
+        }
+        
+        
+        
+        
+        
+        
+
+    }
+
 }

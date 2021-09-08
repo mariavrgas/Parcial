@@ -12,11 +12,16 @@ public class Vehicle implements Comparable<Vehicle> {
     
     private String plaque;
     private String brand;
-    private String color;
+    String color;
     private Person owner;
     
 
-
+    public Vehicle(String plaque, String brand, Person owner) {
+        this.plaque = plaque;
+        this.brand = brand;
+        this.owner = owner;
+    }
+    
 
     public String getPlaque() {
         return plaque;
@@ -45,10 +50,6 @@ public class Vehicle implements Comparable<Vehicle> {
     @Override
     public int compareTo(Vehicle o) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public String getColor() {
-        return color;
     }
 
     

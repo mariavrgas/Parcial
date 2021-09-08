@@ -14,8 +14,9 @@ public class CircularDoubleList <T extends Comparable<T> > implements IListable<
     private Node<T> first;
     private Node<T> next;
     private Node<T> Previous;
-    private Node<T> current;
+    Node<T> current;
     private Vehicle c; 
+
 
 
     public CircularDoubleList(){
@@ -77,6 +78,9 @@ public class CircularDoubleList <T extends Comparable<T> > implements IListable<
     void add(Vehicle slot) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+    
+    
+    
 
 
     
