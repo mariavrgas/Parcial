@@ -27,15 +27,15 @@ public class Main {
 
             switch (input) {
                 case 1:
-                    String name = JOptionPane.showInputDialog("Digite el nombre");
-                    int age = Integer.parseInt(JOptionPane.showInputDialog("Digite la edad"));
-                    Vehicle car = new Vehicle(plaque,brand,owner);
+                    String plaque = JOptionPane.showInputDialog("Digite el plaque");
+                    String brand = JOptionPane.showInputDialog("Digite la brand");
+                    Vehicle car = new Vehicle(plaque,brand);
                     
                     //String cc = JOptionPane.showInputDialog("Digite el cilidraje");
                     //Car car = new Car( Integer.parseInt(cc) ,false);
                     
-                    Node node = new Node( student );
-                    list.add(node);
+                    Node node = new Node( car );
+                    parq.add(node);
                     break;
                 case 2:
                     break;
@@ -43,13 +43,13 @@ public class Main {
                 case 3:
                     break;
                 case 4:
-                    String students = list.print();
+                    String students = parq.print();
                     JOptionPane.showMessageDialog(null, students);
                     break;
             }
 
         } while (input != 0);
         
-    }
+    
     }
 }

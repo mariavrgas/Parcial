@@ -22,6 +22,10 @@ public class Vehicle implements Comparable<Vehicle> {
         this.brand = brand;
         this.owner = owner;
     }
+
+    Vehicle(String plaque, String brand) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 
     public String getPlaque() {
